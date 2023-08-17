@@ -17,9 +17,8 @@ public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
     @Autowired
     private Calendar cal;
 
-    @Value("# { T(java.lang.Math).random() * 100 }")
-    private double seedNum;
-
+   @Value("#{T(java.lang.Math).random() * 100}")
+private double seedNum;
 
     public List<Speaker> findAll() {
         List<Speaker> speakers = new ArrayList<Speaker>();
